@@ -1,0 +1,95 @@
+.box {
+  width: 350px;
+  height: 270px;
+  background-color: yellow
+  border: 2px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  /* transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: ease-in;
+  transition-delay: 4s; */
+  transition: all 3s ease-in 2s;
+}
+.bg-image {
+  background-image: url("../images/Maskgroup.png");
+  height: 557px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.box:hover {
+  background-color: lightblue;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  transition: all 3s;
+}
+.title {
+  transition: all 3s;
+}
+.box:hover .title {
+  color: red;
+}
+.box:hover .circle {
+  background-color: blue;
+}
+.fa-arrow-up {
+  /* display: none; */
+  height: 0;
+  overflow: hidden;
+  transition: all 5s;
+}
+.box:hover .fa-arrow-up {
+  /* display: block; */
+  height: 40px;
+}
+
+/* car animation */
+.car-image {
+  height: 100px;
+  position: absolute;
+  /* 
+  animation-name: carimage;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+
+  animation: carimage 5s alternate infinite ease-out 2s;
+}
+.image-wraper {
+  position: relative;
+  height: 120px;
+}
+
+.car-image-new {
+  height: 100px;
+  animation: newmove 4s infinite;
+}
+
+@keyframes carimage {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 600px;
+  }
+}
+
+@keyframes newmove {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(800px);
+  }
+}
