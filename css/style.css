@@ -1,7 +1,7 @@
 .box {
   width: 350px;
   height: 270px;
-  background-color: yellow
+  background-color: yellow;
   border: 2px solid #000;
   position: absolute;
   top: 50%;
